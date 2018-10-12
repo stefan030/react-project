@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Vehicles from "./components/Vehicles";
 
 class App extends Component {
+  state = {
+    vehicles: [
+        {id: 1, name: 'Vehicle 1', speed: 200, range: '230 miles'},
+        {id: 2, name: 'Vehicle 2', speed: 210, range: '230 miles'},
+        {id: 3, name: 'Vehicle 3', speed: 220, range: '230 miles'}
+    ]
+  }
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Vehicles vehicles={this.state.vehicles} />
       </div>
     );
   }
