@@ -17,7 +17,6 @@ class AddVehicle extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addVehicle(this.state);
-        console.log('submit');
     }
 
 
